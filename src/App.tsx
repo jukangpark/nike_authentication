@@ -1,4 +1,4 @@
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 import { isDarkState } from "./atoms";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Router from "./Router";
@@ -53,6 +53,10 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none
+  }
+  button {
+    background-color: ${(props) => props.theme.accentColor};
+    color: ${(props) => props.theme.textColor};
   }
 `;
 
