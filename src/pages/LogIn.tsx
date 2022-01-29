@@ -1,3 +1,5 @@
+import React from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../components/Header";
@@ -6,6 +8,11 @@ import Input from "../components/Input";
 const LogoContainer = styled.div`
   width: 420px;
   height: 70px;
+`;
+
+const Form = styled.form`
+  max-width: 420px;
+  margin: 150px auto;
 `;
 
 const Logo = styled.img`
@@ -36,18 +43,39 @@ const Btn = styled.button`
   padding: 0;
 `;
 
-const Form = styled.form`
-  max-width: 420px;
-  margin: 0 auto;
-`;
-
 const Span = styled.div`
   font-size: 14px;
   color: ${(props) => props.theme.accentColor};
   justify-content: stretch;
 `;
 
+const ErrorMessage = styled.span`
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+  color: ${(props) => props.theme.accentColor};
+`;
+
+interface IForm {
+  id: string;
+  password: string;
+}
+
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+  } = useForm<IForm>();
+
+  const handleValid = ({ id, password }: IForm) => {
+    console.log(id, password);
+    console.log(errors);
+  };
+
+  console.log(errors);
+
   return (
     <div>
       <Header />
@@ -57,9 +85,31 @@ const Login = () => {
         </LogoContainer>
         <Title>나이키 로그인</Title>
 
-        <Form>
-          <Input placeholder="아이디" type="text" />
-          <Input placeholder="비밀번호" type="password" />
+        <Form onSubmit={handleSubmit(handleValid)}>
+          <Input
+            {...register("id", {
+              required: "Please write your id",
+              pattern: {
+                value:
+                  /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i,
+                message: "올바르지 않은 이메일 형식입니다.",
+              },
+            })}
+            placeholder="아이디"
+            type="text"
+          />
+          <ErrorMessage>{errors.id?.message}</ErrorMessage>
+          <Input
+            style={{
+              marginBottom: "0",
+            }}
+            {...register("password", {
+              required: "Please write your password",
+            })}
+            placeholder="비밀번호"
+            type="password"
+          />
+          <ErrorMessage>{errors.password?.message}</ErrorMessage>
           <div style={{ display: "flex" }}>
             <input type="checkbox" />
             <Span>로그인 유지하기</Span>
@@ -78,7 +128,6 @@ const Login = () => {
 
           <Span>회원이 아니신가요?</Span>
           <Link to="/join">회원가입</Link>
-          <a href="/#">비회원 주문 조회</a>
         </Form>
       </div>
     </div>

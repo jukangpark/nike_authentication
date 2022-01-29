@@ -19,7 +19,7 @@ const Label = styled.label`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #f2f2f2;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 34px;
