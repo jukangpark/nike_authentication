@@ -5,6 +5,7 @@ import { useRecoilState } from "recoil";
 import styled from "styled-components";
 import { isDarkState } from "../atoms";
 import Toggle from "./Toggle";
+import logoImage from "../../src/img/logo.png";
 
 const Logo = styled.img`
   height: 60px;
@@ -94,8 +95,8 @@ const Header = () => {
       </RightMenu>
 
       <CenterMenu>
-        <a href="/">
-          <Logo src="/img/logo.png" alt="logo"></Logo>
+        <a href="/Nike_Login">
+          <Logo src={logoImage} alt="logo"></Logo>
         </a>
 
         <div

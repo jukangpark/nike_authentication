@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../components/Header";
 import Input from "../components/Input";
+import logoImage from "../../src/img/logo.png";
 
 const LogoContainer = styled.div`
   width: 420px;
@@ -81,7 +82,7 @@ const Login = () => {
       <Header />
       <div style={{ maxWidth: "420px", margin: "0 auto" }}>
         <LogoContainer>
-          <Logo src="/img/logo.png" alt="logo" />
+          <Logo src={logoImage} alt="logo" />
         </LogoContainer>
         <Title>나이키 로그인</Title>
 

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import styled from "styled-components";
 import Header from "../components/Header";
 import Input from "../components/Input";
+import logoImage from "../../src/img/logo.png";
 
 const Form = styled.form`
   max-width: 420px;
@@ -101,7 +102,7 @@ const Join = () => {
       <div style={{ maxWidth: "420px", margin: "0 auto" }}>
         <LogoContainer>
           <a href="/">
-            <Logo src="/img/logo.png" alt="logo" />
+            <Logo src={logoImage} alt="logo" />
           </a>
           <Title>나이키 회원가입</Title>
           <Span>

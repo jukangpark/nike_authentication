@@ -13,6 +13,9 @@ const Router = () => {
         <Route path="/join">
           <Join />
         </Route>
+        <Route path="/Nike_Login">
+          <Home />
+        </Route>
         <Route path="/">
           <Home />
         </Route>
