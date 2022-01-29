@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Nike_Login/static/js/main.0ef9a390.js",
+    "main.js": "/Nike_Login/static/js/main.98425e13.js",
     "index.html": "/Nike_Login/index.html",
-    "main.0ef9a390.js.map": "/Nike_Login/static/js/main.0ef9a390.js.map"
+    "main.98425e13.js.map": "/Nike_Login/static/js/main.98425e13.js.map"
   },
   "entrypoints": [
-    "static/js/main.0ef9a390.js"
+    "static/js/main.98425e13.js"
   ]
 }
