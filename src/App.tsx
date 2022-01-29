@@ -56,7 +56,10 @@ const GlobalStyle = createGlobalStyle`
   }
   button {
     background-color: ${(props) => props.theme.accentColor};
-    color: ${(props) => props.theme.textColor};
+    color: white;
+  }
+  div {
+    box-sizing: border-box;
   }
 `;
 
