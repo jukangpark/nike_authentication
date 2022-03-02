@@ -1,5 +1,9 @@
-# Nike Login with React
+# Nike Authentication with React-hook-form
 
-## How to start?
+<P align="center">
+<img width="80%" alt="mainPage" src="https://user-images.githubusercontent.com/75718898/156290308-2b9a9f34-ab0c-419d-93d8-5d07f77a7156.png">
+</p>
 
-https://jukangpark.github.io/Nike_Login
+<p align='center'>
+    <a href="https://jukangpark.github.io/Nike_Login/">Published Webpage</a>
+</p>
