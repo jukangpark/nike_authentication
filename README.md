@@ -5,5 +5,5 @@
 </p>
 
 <p align='center'>
-    <a href="https://jukangpark.github.io/Nike_Login/">Published Webpage</a>
+    <a href="https://jukangpark.github.io/nike_authentication">Published Webpage</a>
 </p>
